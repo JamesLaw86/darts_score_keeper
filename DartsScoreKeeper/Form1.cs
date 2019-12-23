@@ -79,7 +79,11 @@ namespace DartsScoreKeeper
             textScore1.Text = dartBoard.getScore(DartBoard.PlayerNum.PlayerOne).ToString();
             textScore2.Text = dartBoard.getScore(DartBoard.PlayerNum.PlayerTwo).ToString();
 
-            
+            float avP1 = dartBoard.getAverage(DartBoard.PlayerNum.PlayerOne);
+            labelP1Average.Text = "Average: " + string.Format("{0:0.0#}", avP1);
+            float avP2 = dartBoard.getAverage(DartBoard.PlayerNum.PlayerTwo);
+            labelP2Average.Text = "Average: " + string.Format("{0:0.0#}", avP2);
+
             if (dartBoard.winner != DartBoard.PlayerNum.Nobody)
             {
                 winningPictureBox.Visible = true;
