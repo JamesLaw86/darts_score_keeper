@@ -40,15 +40,26 @@
             this.btnNewGame = new System.Windows.Forms.Button();
             this.dartP1 = new System.Windows.Forms.PictureBox();
             this.dartP2 = new System.Windows.Forms.PictureBox();
-            this.btn301 = new System.Windows.Forms.Button();
+            this.radio501 = new System.Windows.Forms.RadioButton();
+            this.radio301 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.winningPictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelP1Average = new System.Windows.Forms.Label();
+            this.labelP2Average = new System.Windows.Forms.Label();
+            this.pictureBoxCelebrate = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dartP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dartP2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.winningPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCelebrate)).BeginInit();
             this.SuspendLayout();
             // 
             // textScore1
             // 
             this.textScore1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textScore1.Location = new System.Drawing.Point(80, 83);
+            this.textScore1.Location = new System.Drawing.Point(92, 83);
             this.textScore1.Name = "textScore1";
             this.textScore1.ReadOnly = true;
             this.textScore1.Size = new System.Drawing.Size(194, 74);
@@ -59,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 49);
+            this.label1.Location = new System.Drawing.Point(128, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 1;
@@ -68,7 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(558, 49);
+            this.label2.Location = new System.Drawing.Point(570, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 20);
             this.label2.TabIndex = 3;
@@ -77,7 +88,7 @@
             // textScore2
             // 
             this.textScore2.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textScore2.Location = new System.Drawing.Point(522, 83);
+            this.textScore2.Location = new System.Drawing.Point(534, 83);
             this.textScore2.Name = "textScore2";
             this.textScore2.ReadOnly = true;
             this.textScore2.Size = new System.Drawing.Size(194, 74);
@@ -88,7 +99,7 @@
             // textCurrentScore
             // 
             this.textCurrentScore.Font = new System.Drawing.Font("Comic Sans MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textCurrentScore.Location = new System.Drawing.Point(320, 265);
+            this.textCurrentScore.Location = new System.Drawing.Point(331, 265);
             this.textCurrentScore.Name = "textCurrentScore";
             this.textCurrentScore.Size = new System.Drawing.Size(152, 63);
             this.textCurrentScore.TabIndex = 0;
@@ -101,7 +112,7 @@
             // radioPlayer2
             // 
             this.radioPlayer2.AutoSize = true;
-            this.radioPlayer2.Location = new System.Drawing.Point(489, 278);
+            this.radioPlayer2.Location = new System.Drawing.Point(511, 278);
             this.radioPlayer2.Name = "radioPlayer2";
             this.radioPlayer2.Size = new System.Drawing.Size(155, 24);
             this.radioPlayer2.TabIndex = 5;
@@ -114,7 +125,7 @@
             // radioPlayer1
             // 
             this.radioPlayer1.AutoSize = true;
-            this.radioPlayer1.Location = new System.Drawing.Point(143, 278);
+            this.radioPlayer1.Location = new System.Drawing.Point(151, 278);
             this.radioPlayer1.Name = "radioPlayer1";
             this.radioPlayer1.Size = new System.Drawing.Size(158, 24);
             this.radioPlayer1.TabIndex = 6;
@@ -126,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(348, 233);
+            this.label3.Location = new System.Drawing.Point(359, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 7;
@@ -134,18 +145,18 @@
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(45, 453);
+            this.btnNewGame.Location = new System.Drawing.Point(120, 441);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(113, 46);
             this.btnNewGame.TabIndex = 1;
-            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.Text = "Start";
             this.btnNewGame.UseVisualStyleBackColor = true;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // dartP1
             // 
             this.dartP1.Image = ((System.Drawing.Image)(resources.GetObject("dartP1.Image")));
-            this.dartP1.Location = new System.Drawing.Point(22, 265);
+            this.dartP1.Location = new System.Drawing.Point(33, 265);
             this.dartP1.Name = "dartP1";
             this.dartP1.Size = new System.Drawing.Size(100, 50);
             this.dartP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -155,30 +166,105 @@
             // dartP2
             // 
             this.dartP2.Image = ((System.Drawing.Image)(resources.GetObject("dartP2.Image")));
-            this.dartP2.Location = new System.Drawing.Point(676, 265);
+            this.dartP2.Location = new System.Drawing.Point(691, 265);
             this.dartP2.Name = "dartP2";
             this.dartP2.Size = new System.Drawing.Size(100, 50);
             this.dartP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dartP2.TabIndex = 8;
             this.dartP2.TabStop = false;
             // 
-            // btn301
+            // radio501
             // 
-            this.btn301.Location = new System.Drawing.Point(188, 453);
-            this.btn301.Name = "btn301";
-            this.btn301.Size = new System.Drawing.Size(113, 46);
-            this.btn301.TabIndex = 10;
-            this.btn301.Text = "301";
-            this.btn301.UseVisualStyleBackColor = true;
-            this.btn301.Click += new System.EventHandler(this.btn301_Click);
+            this.radio501.AutoSize = true;
+            this.radio501.Location = new System.Drawing.Point(22, 35);
+            this.radio501.Name = "radio501";
+            this.radio501.Size = new System.Drawing.Size(61, 24);
+            this.radio501.TabIndex = 11;
+            this.radio501.TabStop = true;
+            this.radio501.Text = "501";
+            this.radio501.UseVisualStyleBackColor = true;
+            // 
+            // radio301
+            // 
+            this.radio301.AutoSize = true;
+            this.radio301.Location = new System.Drawing.Point(22, 71);
+            this.radio301.Name = "radio301";
+            this.radio301.Size = new System.Drawing.Size(61, 24);
+            this.radio301.TabIndex = 12;
+            this.radio301.TabStop = true;
+            this.radio301.Text = "301";
+            this.radio301.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radio301);
+            this.groupBox1.Controls.Add(this.radio501);
+            this.groupBox1.Location = new System.Drawing.Point(33, 388);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(242, 114);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "New Game";
+            // 
+            // winningPictureBox
+            // 
+            this.winningPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("winningPictureBox.Image")));
+            this.winningPictureBox.Location = new System.Drawing.Point(503, 326);
+            this.winningPictureBox.Name = "winningPictureBox";
+            this.winningPictureBox.Size = new System.Drawing.Size(315, 190);
+            this.winningPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.winningPictureBox.TabIndex = 14;
+            this.winningPictureBox.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(332, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 143);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelP1Average
+            // 
+            this.labelP1Average.AutoSize = true;
+            this.labelP1Average.Location = new System.Drawing.Point(123, 175);
+            this.labelP1Average.Name = "labelP1Average";
+            this.labelP1Average.Size = new System.Drawing.Size(116, 20);
+            this.labelP1Average.TabIndex = 16;
+            this.labelP1Average.Text = "Average: 100.3";
+            // 
+            // labelP2Average
+            // 
+            this.labelP2Average.AutoSize = true;
+            this.labelP2Average.Location = new System.Drawing.Point(570, 175);
+            this.labelP2Average.Name = "labelP2Average";
+            this.labelP2Average.Size = new System.Drawing.Size(116, 20);
+            this.labelP2Average.TabIndex = 17;
+            this.labelP2Average.Text = "Average: 100.3";
+            // 
+            // pictureBoxCelebrate
+            // 
+            this.pictureBoxCelebrate.Location = new System.Drawing.Point(315, 351);
+            this.pictureBoxCelebrate.Name = "pictureBoxCelebrate";
+            this.pictureBoxCelebrate.Size = new System.Drawing.Size(179, 151);
+            this.pictureBoxCelebrate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCelebrate.TabIndex = 18;
+            this.pictureBoxCelebrate.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(827, 526);
-            this.Controls.Add(this.btn301);
+            this.Controls.Add(this.pictureBoxCelebrate);
+            this.Controls.Add(this.labelP2Average);
+            this.Controls.Add(this.labelP1Average);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.winningPictureBox);
             this.Controls.Add(this.dartP1);
             this.Controls.Add(this.dartP2);
             this.Controls.Add(this.btnNewGame);
@@ -190,10 +276,17 @@
             this.Controls.Add(this.textScore2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textScore1);
+            this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Game On!";
             ((System.ComponentModel.ISupportInitialize)(this.dartP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dartP2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.winningPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCelebrate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +305,14 @@
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.PictureBox dartP2;
         private System.Windows.Forms.PictureBox dartP1;
-        private System.Windows.Forms.Button btn301;
+        private System.Windows.Forms.RadioButton radio501;
+        private System.Windows.Forms.RadioButton radio301;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox winningPictureBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelP1Average;
+        private System.Windows.Forms.Label labelP2Average;
+        private System.Windows.Forms.PictureBox pictureBoxCelebrate;
     }
 }
 
